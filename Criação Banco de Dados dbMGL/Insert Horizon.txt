@@ -1,0 +1,11 @@
+insert into Armazenamento values (0, '100 GB de espaço disponível', GETDATE())
+insert into Classificacao values (0, '+14', GETDATE())
+insert into PlacaVideo values (0, 'Nvidia GeForce GTX 780 (3 GB) or AMD Radeon R9 290 (4GB)', GETDATE())
+insert into Plataforma values (0, 'Microsoft Windows, Playstation 4', GETDATE())
+insert into Processador values (0, 'Intel Core i5-2500K@3.3GHz or AMD FX 6300@3.5GHz', GETDATE())
+insert into SO values (0, 'Windows 10 64-bits', GETDATE())
+insert into Game values ('Horizon Zero Dawn', 'Viva a experiência de Aloy dos Nora em sua busca lendária para desvendar os mistérios de um mundo controlado por Máquinas mortais.
+Exilada da sua tribo, esta jovem caçadora luta para desvendar seu passado, descobrir seu destino… e deter uma catástrofe futura.
+Lance ataques táticos devastadores contra Máquinas e também tribos rivais, enquanto explora um mundo aberto cheio de vida selvagem e perigos.',
+1, 'assets\PagJogo\Horizon\HZD.jpg', GETDATE())
+insert into detalhes values (4, 0, 4, 3, 4, 4, 3, 4, 4, GETDATE())

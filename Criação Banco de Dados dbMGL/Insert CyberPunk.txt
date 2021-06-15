@@ -1,0 +1,11 @@
+insert into Armazenamento values (0, '70 GB de espaço disponível', GETDATE())
+insert into Classificacao values (0, '+18', GETDATE())
+insert into Memoria values (0, '8GB de RAM', GETDATE())
+insert into PlacaVideo values (0, 'NVIDIA GeForce GTX 780 or AMD Radeon RX 470', GETDATE())
+insert into Plataforma values (0, 'Microsoft Windows, PlayStation 4, Xbox One, PlayStation 5, Xbox Series X/S, Stadia', GETDATE())
+insert into Processador values (0, 'Intel Core i5-3570K ou AMD FX-8310', GETDATE())
+insert into SO values (0, 'Windows 7 ou 10 64 bits', GETDATE())
+insert into Game values ('CyberPunk 2077', 'Cyberpunk 2077 é uma história de ação e aventura de mundo aberto ambientada em Night City, uma megalópole obcecada por poder, glamour e biomodificações.
+Você joga como V, um mercenário fora da lei atrás de um implante único que carrega a chave da imortalidade.',
+1, 'assets\PagJogo\Cyberpunk\Cyberpunk.png', GETDATE())
+insert into detalhes values (2, 0,2, 2, 2, 2, 2, 2, 2, GETDATE())

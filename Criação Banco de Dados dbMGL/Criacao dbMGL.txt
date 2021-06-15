@@ -1,0 +1,275 @@
+Create database dbMGL;
+
+USE [dbMGL]
+GO
+
+
+/****** Object:  Table [dbo].[Usuario]    Script Date: 13/04/2021 13:48:30 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Usuario](
+	[idUsuario] [int] IDENTITY(1,1) NOT NULL,
+	[Nome_Usuario] [varchar](100) NULL,
+	[Email_Usuario] [varchar](100) NULL,
+	[Login_Usuario] [varchar](20) NULL,
+	[Password_Usuario] [varchar](50) NULL,
+	[ADM_Usuario] [int] NULL,
+	[DataCriacao_Usuario] [datetime] NULL,
+	[DataNascimento_Usuario] [datetime] NULL,
+ CONSTRAINT [PK_Usuario] PRIMARY KEY CLUSTERED 
+(
+	[idUsuario] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Usuarios do sistema' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Usuario'
+GO
+
+
+
+/****** Object:  Table [dbo].[Categoria]    Script Date: 13/04/2021 13:49:56 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Categoria](
+	[IdCategoria] [int] IDENTITY(1,1) NOT NULL,
+	[Nome_Categoria] [varchar](100) NULL,
+	[DataCriacao_Categoria] [datetime] NULL,
+ CONSTRAINT [PK_Categoria] PRIMARY KEY CLUSTERED 
+(
+	[IdCategoria] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Categoria dos Games' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Categoria'
+GO
+
+
+
+/****** Object:  Table [dbo].[Armazenamento]    Script Date: 03/06/2021 21:55:33 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Armazenamento](
+	[CodArmazenamento] [int] IDENTITY(1,1) NOT NULL,
+	[CodVisibilidade] INT NOT NULL,
+	[NomeArmazenamento] [varchar](100) NOT NULL,
+	[DataCadastro] [datetime] NOT NULL,
+	 CONSTRAINT [PK_Armazenamento] PRIMARY KEY CLUSTERED 
+(
+	[CodArmazenamento] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+
+) ON [PRIMARY]
+GO
+
+
+
+/****** Object:  Table [dbo].[Classificacao]    Script Date: 03/06/2021 21:58:03 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Classificacao](
+	[CodClassificacao] [int] IDENTITY(1,1) NOT NULL,
+	[CodVisibilidade] INT NOT NULL,
+	[NomeClassificacao] [varchar](100) NOT NULL,
+	[DataCadastro] [datetime] NOT NULL,
+
+	 CONSTRAINT [PK_Classificacao] PRIMARY KEY CLUSTERED 
+(
+	[CodClassificacao] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+ 
+) ON [PRIMARY]
+GO
+
+
+
+/****** Object:  Table [dbo].[Memoria]    Script Date: 03/06/2021 21:59:47 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Memoria](
+	[CodMemoria] [int] IDENTITY(1,1) NOT NULL,
+	[CodVisibilidade] INT NOT NULL,
+	[NomeMemoria] [varchar](100) NOT NULL,
+	[DataCadastro] [datetime] NOT NULL,
+		 CONSTRAINT [PK_Memoria] PRIMARY KEY CLUSTERED 
+(
+	[CodMemoria] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+ 
+) ON [PRIMARY]
+GO
+
+
+
+/****** Object:  Table [dbo].[PlacaVideo]    Script Date: 03/06/2021 22:00:42 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[PlacaVideo](
+	[CodPlacaVideo] [int] IDENTITY(1,1) NOT NULL,
+	[CodVisibilidade] INT NOT NULL,
+	[NomePlacaVideo] [varchar](100) NOT NULL,
+	[DataCadastro] [datetime] NOT NULL,
+		 CONSTRAINT [PK_PlacaVideo] PRIMARY KEY CLUSTERED 
+(
+	[CodPlacaVideo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+ 
+) ON [PRIMARY]
+GO
+
+
+
+/****** Object:  Table [dbo].[Plataforma]    Script Date: 03/06/2021 22:01:23 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Plataforma](
+	[CodPlataforma] [int] IDENTITY(1,1) NOT NULL,
+	[CodVisibilidade] INT NOT NULL,
+	[NomePlataforma] [varchar](100) NOT NULL,
+	[DataCadastro] [datetime] NOT NULL,
+		 CONSTRAINT [PK_Plataforma] PRIMARY KEY CLUSTERED 
+(
+	[CodPlataforma] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+ 
+) ON [PRIMARY]
+GO
+
+
+
+/****** Object:  Table [dbo].[Processador]    Script Date: 03/06/2021 22:02:10 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Processador](
+	[CodProcessador] [int] IDENTITY(1,1) NOT NULL,
+	[CodVisibilidade] INT NOT NULL,
+	[NomeProcessador] [varchar](100) NOT NULL,
+	[DataCadastro] [datetime] NOT NULL,
+		 CONSTRAINT [PK_Processador] PRIMARY KEY CLUSTERED 
+(
+	[CodProcessador] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+ 
+) ON [PRIMARY]
+GO
+
+
+
+/****** Object:  Table [dbo].[SO]    Script Date: 03/06/2021 22:02:58 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[SO](
+	[CodSO] [int] IDENTITY(1,1) NOT NULL,
+	[CodVisibilidade] INT NOT NULL,
+	[NomeSO] [varchar](100) NOT NULL,
+	[DataCadastro] [datetime] NOT NULL,
+		 CONSTRAINT [PK_SO] PRIMARY KEY CLUSTERED 
+(
+	[CodSO] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+ 
+) ON [PRIMARY]
+GO
+
+
+/****** Object:  Table [dbo].[Game]    Script Date: 03/06/2021 22:53:22 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Game](
+	[IdGame] [int] IDENTITY(1,1) NOT NULL,
+	[Nome_Game] [varchar](100) NULL,
+	[Descricao_Game] [varchar](1500) NULL,
+	[IdCategoria_Game] [int] NULL,
+	[SRC_Imagem_Game] [varchar](100) NULL,
+	[DataCriacao_Game] [datetime] NULL,
+ CONSTRAINT [PK_Game] PRIMARY KEY CLUSTERED 
+(
+	[IdGame] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+constraint [FK_Categoria] foreign key (IdCategoria_Game)references Categoria(IdCategoria)
+) ON [PRIMARY]
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Catálogo de Jogos' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Game'
+GO
+
+
+
+/****** Object:  Table [dbo].[Detalhes]    Script Date: 03/06/2021 21:35:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Detalhes](
+	[CodDetalhes] [int] IDENTITY(1,1) NOT NULL,
+        [CodGame] [int] NOT NUll,
+	[CodVisibilidade] INT NOT NULL,
+	[CodDetalhesClass] [int] NOT NULL,
+	[CodDetalhesSO] [int] NOT NULL,
+	[CodDetalhesProcessador] [int] NOT NULL,
+	[CodDetalhesPlacaVideo] [int] NOT NULL,
+	[CodDetalhesMemoria] [int] NOT NULL,
+	[CodDetalhesArmazenamento] [int] NOT NULL,
+	[CodDetalhesPlataforma] [int] NOT NULL,
+	[DataCadastro] [datetime] NOT NULL,
+  CONSTRAINT [PK_Detalhes] PRIMARY KEY CLUSTERED 
+(
+	[CodDetalhes] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+	constraint [FK_Game] foreign key (CodGame) references Game(IdGame),
+	constraint FK_RequisitosClass foreign key (CodDetalhesClass) references Classificacao(CodClassificacao),
+	constraint FK_RequisitosSO foreign key (CodDetalhesSO) references SO(CodSO),
+	constraint FK_RequisitosProcessador foreign key (CodDetalhesProcessador) references Processador(CodProcessador),
+	constraint FK_RequisitosPlacaVideo foreign key (CodDetalhesPlacaVideo) references PlacaVideo(CodPlacaVideo),
+	constraint FK_RequisitosMemoria foreign key (CodDetalhesMemoria) references Memoria(CodMemoria),
+	constraint FK_RequisitosArmazenamento foreign key (CodDetalhesArmazenamento) references Armazenamento(CodArmazenamento),
+	constraint FK_RequisitosPlataforma foreign key (CodDetalhesPlataforma) references Plataforma(CodPlataforma)
+	
+) ON [PRIMARY]
+GO
+
+
+

@@ -1,0 +1,11 @@
+insert into Armazenamento values (0, '500 MB de espaço disponível', GETDATE())
+insert into Categoria values ('RPG', GETDATE())
+insert into Classificacao values (0, '+12', GETDATE())
+insert into Memoria values (0, '2GB RAM', GETDATE())
+insert into PlacaVideo values (0, '256 MB VRAM, Shader 3.0+', GETDATE())
+insert into Plataforma values (0, 'Desktop', GETDATE())
+insert into Processador values (0, '2 Ghz', GETDATE())
+insert into SO values (0, 'Windows Vistou ou superior', GETDATE())
+insert into Game values ('Stardew Valley', 'Você herdou a antiga fazenda do seu avô, em Stardew Valley. Com ferramentas de segunda-mão e algumas moedas, você parte para dar início a sua nova vida. Será que você vai aprender a viver da terra, a transformar esse matagal em um próspero lar?',
+1, 'assets\PagJogo\Stardew\Stardew.png', GETDATE())
+insert into detalhes values (1, 0, 1, 1, 1, 1, 1, 1, 1, GETDATE())

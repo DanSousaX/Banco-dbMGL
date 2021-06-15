@@ -1,0 +1,10 @@
+insert into Armazenamento values (0, '25 GB de espaço disponível', GETDATE())
+insert into Memoria values (0, '4GB de RAM', GETDATE())
+insert into PlacaVideo values (0, 'NVIDIA® GeForce GTX 750 Ti / ATI Radeon HD 7950', GETDATE())
+insert into Plataforma values (0, 'Microsoft Windows, Playstation 4, Xbox One', GETDATE())
+insert into Processador values (0, 'Intel Core i3-2100 / AMD® FX-6300', GETDATE())
+insert into Game values ('Dark Souls III', 'Premiado como "Melhor RPG" na Gamescom 2015 e com mais de 35 prêmios e indicações na E3 2015, DARK SOULS™ III continua a elevar o patamar de uma das séries mais inovadoras e aclamadas pela crítica.
+Com o fogo se apagando e o mundo caindo em ruínas, você precisa se aventurar em um universo repleto de inimigos e ambientes colossais. Jogadores entrarão em um mundo de trevas e atmosfera épica, com uma jogabilidade mais ágil e combates mais intensos.
+Agora só restam cinzas... Prepare-se para abraçar a escuridão mais uma vez!',
+1, 'assets\PagJogo\DS3\DS3.png', GETDATE())
+insert into detalhes values (5, 0, 2, 2, 5, 5, 4, 5, 5, GETDATE())
